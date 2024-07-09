@@ -1,0 +1,40 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = tubehao
+	email = guanhao0412@163.com
+[http]
+	sslVerify = false
+	proxy = 127.0.0.1:7890
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[core]
+	autocrlf = true
+[alias]
+	br = branch
+	st = status
+	cm = commit -m
+	df = diff
+	ck = checkout
+    re = remote
+    pl = pull --rebase origin
+    ps = push origin
+    ft = fetch -p origin
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
+	ls = log --oneline
+	caa = commit -a --amend -C HEAD
+	cma = commit -a -m
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	undo = reset HEAD~1 --mixed
+	sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
+
+
+	
+[https]
+	proxy = 127.0.0.1:7890
