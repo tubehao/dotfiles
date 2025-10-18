@@ -1,5 +1,8 @@
 git clone  
 source autoconfig.sh 
+
+ref to https://dev.to/equiman/zsh-on-windows-without-wsl-4ah9
+
 Download and install manually the [Meslo Nerd Fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) to include all glyphs and symbols that Powerlevel10k may need
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
